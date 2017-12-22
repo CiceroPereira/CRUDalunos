@@ -16,7 +16,7 @@ class CreateResponsavelsTable extends Migration
         Schema::create('responsavels', function (Blueprint $table) {
 
             $table->integer('aluno_id')->unsigned()->primary();
-            $table->foreign('aluno_id')->references('id')->on('alunos');
+            $table->foreign('aluno_id')->references('id')->on('alunos')->onDelete('cascade');
 
             $table->string('nomemae', 255);
             $table->string('cpf', 14);

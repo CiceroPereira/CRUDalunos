@@ -12,9 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/insert', 'AlunosController@formulario');
 Route::post('/insert', 'AlunosController@post');
 Route::get('/listar', 'AlunosController@listing');
+Route::delete('listar/delete/{id}', 'AlunosController@destroy');
+Route::get('/insert/edit/{id}' , 'AlunosController@edit');
+Route::put('/insert/edit/{id}' , 'AlunosController@edit');
+Route::put('/insert/edit/{id}' , 'AlunosController@update');
+

@@ -27,7 +27,7 @@ class AlunoRequest extends FormRequest
 
         return [
             'nome'=>'required',
-            'datanasc'=>'required', 
+            'datanasc'=>'required|date', 
             'serie'=>'required', 
             'cep'=>'required', 
             'rua'=>'required',
@@ -36,8 +36,8 @@ class AlunoRequest extends FormRequest
             'cidade'=>'required', 
             'estado'=>'required',
             'nomemae'=>'required', 
-            'cpf'=>'required', 
-            'datapag'=>'required'
+            'cpf'=>'required|cpf', 
+            'datapag'=>'required|date'
             //
         ];
     }
